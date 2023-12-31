@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teams_navigation"
+    app:startDestination="@id/regionsFragment">
+
+    <fragment
+        android:id="@+id/regionsFragment"
+        android:name="com.example.dotaapp.fragments.RegionsFragment"
+        android:label="fragment_regions"
+        tools:layout="@layout/fragment_regions" >
+        <action
+            android:id="@+id/action_regionsFragment_to_listTeamsFragment"
+            app:destination="@id/listTeamsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listTeamsFragment"
+        android:name="com.example.dotaapp.fragments.ListTeamsFragment"
+        android:label="fragment_list_teams"
+        tools:layout="@layout/fragment_list_teams" >
+        <action
+            android:id="@+id/action_listTeamsFragment_to_teamDetailFragment"
+            app:destination="@id/teamDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamDetailFragment"
+        android:name="com.example.dotaapp.fragments.TeamDetailFragment"
+        android:label="fragment_team_detail"
+        tools:layout="@layout/fragment_team_detail" >
+        <action
+            android:id="@+id/action_teamDetailFragment_to_home_navigation"
+            app:destination="@id/home_navigation" />
+    </fragment>
+    <include app:graph="@navigation/home_navigation" />
+</navigation>
