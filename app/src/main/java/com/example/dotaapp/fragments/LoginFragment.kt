@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
         val prefPassword = preferences.getString("password", "")?:""
         confirmPref(prefName, prefPassword)//Se verrifica existencia de preferences
 
-        binding.btnIngresar.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             val userName = binding.edtUserNameLog.editText?.text
             val userPass = binding.edtUserPassLog.editText?.text
             

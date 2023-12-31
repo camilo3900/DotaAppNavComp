@@ -17,12 +17,12 @@ class TeamsAdapter(private var team: MutableList<Team>, val context: Context):
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(equipo: Team){
             val binding: TeamItemListBinding = TeamItemListBinding.bind(itemView)
-            binding.tvNombreTeam.text = equipo.name
-            binding.tvPaisTeam.text = equipo.country
+            binding.tvTeamName.text = equipo.name
+            binding.tvTeamCountry.text = equipo.country
             Glide.with(context)
                 .load(equipo.logo)
                 .placeholder(R.drawable.placeholder_logo2)
-                .into(binding.imgTeam)
+                .into(binding.imgTeamLogo)
 
             itemView.setOnClickListener {
                 clickItem(equipo)

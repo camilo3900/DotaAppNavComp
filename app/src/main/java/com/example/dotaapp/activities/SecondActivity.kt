@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        setSupportActionBar(binding?.toolbar)
+        setSupportActionBar(binding?.mainToolbar)
         if(savedInstanceState != null){
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)

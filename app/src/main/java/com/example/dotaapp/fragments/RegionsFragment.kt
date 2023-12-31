@@ -38,7 +38,7 @@ class RegionsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerRegions = binding.rvRegiones
+        recyclerRegions = binding.rvRegions
         adapter = RegionsAdapter(getRegions())
         recyclerRegions
             .layoutManager = LinearLayoutManager(requireContext(),
